@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================== */
+/* === TÙY CHỈNH CSS CHO SLIDER "CENTER MODE" === */
+/* =========================================== */
+
+.slider-wrapper {
+  overflow: hidden;
+}
+
+/* Thu nhỏ và làm mờ các slide không ở giữa */
+.center-slider .slick-slide {
+  transform: scale(0.8);
+  opacity: 0.6;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Slide ở giữa thì trở lại kích thước bình thường và rõ nét */
+.center-slider .slick-center {
+  transform: scale(1);
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Tùy chỉnh các dấu chấm điều hướng (dots) */
+.center-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #a0aec0; /* Màu xám (gray-500) */
+  opacity: 0.75;
+}
+
+.center-slider .slick-dots li.slick-active button:before {
+  color: #34d399; /* Màu xanh (emerald-400) */
+  opacity: 1;
+}
